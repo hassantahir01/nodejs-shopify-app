@@ -16,8 +16,6 @@ let domain = '';
 async function storeCallback(session) {
     try {
         let data = session;
-        console.log(data);
-
         data.onlineAccessInfo = JSON.stringify(session.onlineAccessInfo);
 
         if(data.id.indexOf(`${data.shop}`) > -1) {

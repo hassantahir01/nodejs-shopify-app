@@ -27,6 +27,7 @@ class Index extends React.Component {
             onCancel={() => this.setState({ open: false })}
         />
         <Layout>
+
             <EmptyState
                 heading="Discount your products temporarily"
                 action={{

@@ -7,8 +7,8 @@ const {default: createShopifyAuth} = require('@shopify/koa-shopify-auth');
 const {verifyRequest} = require('@shopify/koa-shopify-auth');
 const {default: Shopify, ApiVersion} = require('@shopify/shopify-api');
 const Router = require('koa-router');
-require('./routes/route');
-// const { storeCallback, loadCallback, deleteCallback } = require("./database");
+// require('./routes/route');
+const { storeCallback, loadCallback, deleteCallback } = require("./database");
 // const session = require('koa-generic-session');
 // const redisStore = require('koa-redis');
 // import {RedisStore} from './redis-store';
@@ -22,8 +22,8 @@ require('./routes/route');
 dotenv.config();
 
 
-const RedisStore = require('./redis-store-2');
-const sessionStorage=new RedisStore();
+// const RedisStore = require('./redis-store-2');
+// const sessionStorage=new RedisStore();
 
 
 
@@ -38,9 +38,10 @@ Shopify.Context.initialize({
     IS_EMBEDDED_APP: true,
     // SESSION_STORAGE: new Shopify.Session.MemorySessionStorage(),
     SESSION_STORAGE: new Shopify.Session.CustomSessionStorage(
-        sessionStorage.storeCallback,
-        sessionStorage.loadCallback,
-        sessionStorage.deleteCallback,
+        storeCallback, loadCallback, deleteCallback
+        // sessionStorage.storeCallback,
+        // sessionStorage.loadCallback,
+        // sessionStorage.deleteCallback,
     ),
 });
 
@@ -58,7 +59,7 @@ app.prepare().then(() => {
 
     server.use(
         createShopifyAuth({
-            accessMode: 'offline',
+            accessMode: 'online',
             afterAuth(ctx) {
                 const {shop, scope} = ctx.state.shopify;
                 ACTIVE_SHOPIFY_SHOPS[shop] = scope;
@@ -80,7 +81,25 @@ app.prepare().then(() => {
         ctx.res.statusCode = 200;
     };
 
+    router.get("/", async (ctx) => {
+        const shop = ctx.query.shop;
 
+        if (ACTIVE_SHOPIFY_SHOPS[shop] === undefined) {
+            ctx.redirect(`/auth?shop=${shop}`);
+        } else {
+            await handleRequest(ctx);
+        }
+    });
+    router.get("/annotated-layout", async (ctx) => {
+        const shop = ctx.query.shop;
+
+        // This shop hasn't been seen yet, go through OAuth to create a session
+        if (ACTIVE_SHOPIFY_SHOPS[shop] === undefined) {
+            ctx.redirect(`/auth?shop=${shop}`);
+        } else {
+            await handleRequest(ctx);
+        }
+    });
 
 
     router.get("(/_next/static/.*)", handleRequest);

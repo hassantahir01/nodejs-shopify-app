@@ -11,6 +11,7 @@ import {
     TextField,
     TextStyle
 } from '@shopify/polaris';
+import { ResourcePicker, TitleBar } from '@shopify/app-bridge-react';
 
 class AnnotatedLayout extends React.Component {
     state = {
@@ -25,7 +26,14 @@ class AnnotatedLayout extends React.Component {
 
         return (
             <Page>
+                <TitleBar
+                    title="Sample App"
+                    primaryAction={{
+                        content: 'Select products',
+                    }}
+                />
                 <Layout>
+
                     <Layout.AnnotatedSection
                         title="Default discount"
                         description="Add a product to Sample App, it will automatically be discounted."
