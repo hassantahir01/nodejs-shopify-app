@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50b125ae-dec4-40be-adae-0d936584f0a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/tsconfig_roots.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sample-embedded-app.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SessionHandler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/ClientRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql-db.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/next-env.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/next.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/_app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/annotated-layout.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/redis-store-1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/redis-store-2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/redis-store.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/tsreq/redis-store.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tsconfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,8 +36,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="80" column="12" lean-forward="false" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+            <state relative-caret-position="17">
+              <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -285,12 +257,12 @@
       <workItem from="1624095183922" duration="1331000" />
       <workItem from="1624129147550" duration="1958000" />
       <workItem from="1624176727129" duration="16439000" />
-      <workItem from="1624262553048" duration="13566000" />
+      <workItem from="1624262553048" duration="13719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91499000" />
+    <option name="totallyTimeSpent" value="91652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -731,8 +703,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="80" column="12" lean-forward="false" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+        <state relative-caret-position="17">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
